@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Informática - Módulos</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #f3f6ff, #e8ecf8);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #2563eb;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .modules {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .module {
+      background: #f8fafc;
+      border: 2px solid #dbeafe;
+      border-radius: 15px;
+      padding: 25px 15px;
+      width: 90%;
+      text-align: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .module:hover {
+      background: #2563eb;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .module:hover i {
+      color: white;
+    }
+
+    .module i {
+      font-size: 40px;
+      color: #2563eb;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .modules {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <!-- Ícones (Font Awesome) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1> Curso de Informática Básica</h1>
+  </header>
+
+  <main>
+    <h2>Escolha o módulo para começar</h2>
+
+    <div class="modules">
+      <a href="atalhos.html">
+        <div class="module">
+          <i class="fas fa-keyboard"></i>
+          <h3>Atalhos do Teclado</h3>
+          <p>Aprenda os principais comandos que facilitam o uso do computador.</p>
+        </div>
+      </a>
+
+      <a href="mouse.html">
+        <div class="module">
+          <i class="fas fa-mouse"></i>
+          <h3>Uso do Mouse</h3>
+          <p>Descubra como dominar o ponteiro e aproveitar os cliques ao máximo.</p>
+        </div>
+      </a>
+
+      <a href="organizacao.html">
+        <div class="module">
+          <i class="fas fa-folder-open"></i>
+          <h3>Organização no Computador</h3>
+          <p>Aprenda a criar pastas, salvar arquivos e deixar tudo em ordem.</p>
+        </div>
+      </a>
+
+      <a href="quiz.html">
+        <div class="module">
+          <i class="fas fa-check-circle"></i>
+          <h3>Revisão Final (Quiz)</h3>
+          <p>Teste o que aprendeu com perguntas rápidas e divertidas!</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Curso de Informática Básica | Menu de Módulos
+  </footer>
+</body>
+</html>

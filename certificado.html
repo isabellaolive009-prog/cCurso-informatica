@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificado de Conclusão</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #e8ebf9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .certificado {
+      background: white;
+      border: 8px solid #d4af37;
+      border-radius: 15px;
+      width: 80%;
+      max-width: 900px;
+      padding: 50px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #1e88e5;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #333;
+      font-weight: normal;
+      margin-top: 40px;
+    }
+
+    .nome {
+      font-size: 2em;
+      font-weight: bold;
+      color: #222;
+      margin: 30px 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #444;
+      margin: 10px 0;
+    }
+
+    .assinatura {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .assinatura div {
+      text-align: center;
+      border-top: 2px solid #444;
+      padding-top: 8px;
+      width: 40%;
+    }
+
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 40px;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .data {
+      margin-top: 25px;
+      font-style: italic;
+      color: #555;
+    }
+
+    input {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 1em;
+      border: 2px solid #1e88e5;
+      border-radius: 6px;
+      outline: none;
+      width: 60%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificado" id="certificado">
+    <h1>Certificado de Conclusão</h1>
+    <p>Certificamos que</p>
+
+    <div id="nome" class="nome">_________________________</div>
+
+    <p>concluiu com sucesso o curso <strong>“Aprendendo a Usar o Computador”</strong>, demonstrando dedicação e aproveitamento nas aulas de:</p>
+    <p> Uso do Mouse —  Atalhos do Teclado —  Organização do Computador</p>
+
+    <div class="data" id="data"></div>
+
+    <div class="assinatura">
+      <div>Instrutor(a)</div>
+      <div>Coordenação</div>
+    </div>
+
+    <input type="text" id="inputNome" placeholder="Digite seu nome completo">
+    <br>
+    <button onclick="gerarCertificado()">Gerar Certificado</button>
+    <button onclick="window.print()">Imprimir / Baixar PDF</button>
+  </div>
+
+  <script>
+    function gerarCertificado() {
+      const nomeDigitado = document.getElementById("inputNome").value.trim();
+      const nomeCampo = document.getElementById("nome");
+      const dataCampo = document.getElementById("data");
+
+      if (nomeDigitado === "") {
+        alert("Por favor, digite seu nome para gerar o certificado.");
+        return;
+      }
+
+      // Atualiza o nome no certificado
+      nomeCampo.textContent = nomeDigitado;
+
+      // Mostra a data atual
+      const hoje = new Date();
+      const opcoes = { day: '2-digit', month: 'long', year: 'numeric' };
+      dataCampo.textContent = `Emitido em ${hoje.toLocaleDateString('pt-BR', opcoes)}`;
+
+      // Esconde o campo e botão de digitação
+      document.getElementById("inputNome").style.display = "none";
+    }
+  </script>
+</body>
+</html>

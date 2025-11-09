@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Final</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #1e88e5;
+      border-bottom: 2px solid #1e88e5;
+      padding-bottom: 5px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question p {
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    #result {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #certificate {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #certificate a {
+      background-color: #43a047;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+    }
+
+    #certificate a:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <header>Quiz Final</header>
+  <main>
+    <form id="quizForm">
+
+      <!-- SEÇÃO 1: USO DO MOUSE -->
+      <h2> Uso do Mouse</h2>
+      <div class="question">
+        <p>1. Qual botão do mouse é usado para abrir menus de contexto?</p>
+        <label><input type="radio" name="q1" value="errado"> Botão esquerdo</label>
+        <label><input type="radio" name="q1" value="certo"> Botão direito</label>
+        <label><input type="radio" name="q1" value="errado"> Roda do meio</label>
+      </div>
+
+      <div class="question">
+        <p>2. O que acontece ao clicar duas vezes rapidamente?</p>
+        <label><input type="radio" name="q2" value="certo"> Abre o item selecionado</label>
+        <label><input type="radio" name="q2" value="errado"> Seleciona tudo</label>
+        <label><input type="radio" name="q2" value="errado"> Exclui o item</label>
+      </div>
+
+      <div class="question">
+        <p>3. A roda do mouse serve principalmente para:</p>
+        <label><input type="radio" name="q3" value="certo"> Rolar a página</label>
+        <label><input type="radio" name="q3" value="errado"> Aumentar o volume</label>
+        <label><input type="radio" name="q3" value="errado"> Minimizar janelas</label>
+      </div>
+
+      <div class="question">
+        <p>4. O que é um “clique duplo”?</p>
+        <label><input type="radio" name="q4" value="errado"> Um clique demorado</label>
+        <label><input type="radio" name="q4" value="certo"> Dois cliques rápidos seguidos</label>
+        <label><input type="radio" name="q4" value="errado"> Um clique e arrastar</label>
+      </div>
+
+      <div class="question">
+        <p>5. O que significa "arrastar e soltar"?</p>
+        <label><input type="radio" name="q5" value="certo"> Clicar e mover um item até outro local</label>
+        <label><input type="radio" name="q5" value="errado"> Clicar duas vezes para abrir</label>
+        <label><input type="radio" name="q5" value="errado"> Fechar o item</label>
+      </div>
+
+      <div class="question">
+        <p>6. O ponteiro do mouse muda de forma para indicar:</p>
+        <label><input type="radio" name="q6" value="certo"> Que há diferentes ações possíveis</label>
+        <label><input type="radio" name="q6" value="errado"> Que o computador travou</label>
+        <label><input type="radio" name="q6" value="errado"> Que o mouse está sem bateria</label>
+      </div>
+
+      <div class="question">
+        <p>7. Qual movimento seleciona vários itens de uma vez?</p>
+        <label><input type="radio" name="q7" value="certo"> Clique e arraste com o botão esquerdo</label>
+        <label><input type="radio" name="q7" value="errado"> Duplo clique</label>
+        <label><input type="radio" name="q7" value="errado"> Clique direito</label>
+      </div>
+
+      <div class="question">
+        <p>8. O que indica um cursor em forma de “mão”?</p>
+        <label><input type="radio" name="q8" value="certo"> Que é um link clicável</label>
+        <label><input type="radio" name="q8" value="errado"> Que o computador está ocupado</label>
+        <label><input type="radio" name="q8" value="errado"> Que há erro no site</label>
+      </div>
+
+      <!-- SEÇÃO 2: ATALHOS DO TECLADO -->
+      <h2> Atalhos do Teclado</h2>
+
+      <div class="question">
+        <p>9. Qual atalho copia um texto?</p>
+        <label><input type="radio" name="q9" value="certo"> Ctrl + C</label>
+        <label><input type="radio" name="q9" value="errado"> Ctrl + X</label>
+        <label><input type="radio" name="q9" value="errado"> Ctrl + V</label>
+      </div>
+
+      <div class="question">
+        <p>10. Qual atalho cola um texto?</p>
+        <label><input type="radio" name="q10" value="errado"> Ctrl + C</label>
+        <label><input type="radio" name="q10" value="certo"> Ctrl + V</label>
+        <label><input type="radio" name="q10" value="errado"> Ctrl + Z</label>
+      </div>
+
+      <div class="question">
+        <p>11. Qual atalho desfaz a última ação?</p>
+        <label><input type="radio" name="q11" value="certo"> Ctrl + Z</label>
+        <label><input type="radio" name="q11" value="errado"> Ctrl + Y</label>
+        <label><input type="radio" name="q11" value="errado"> Ctrl + D</label>
+      </div>
+
+      <div class="question">
+        <p>12. Qual atalho fecha uma janela?</p>
+        <label><input type="radio" name="q12" value="errado"> Ctrl + E</label>
+        <label><input type="radio" name="q12" value="certo"> Alt + F4</label>
+        <label><input type="radio" name="q12" value="errado"> Ctrl + Q</label>
+      </div>
+
+      <div class="question">
+        <p>13. Qual atalho abre o Gerenciador de Tarefas?</p>
+        <label><input type="radio" name="q13" value="errado"> Ctrl + Alt + Del</label>
+        <label><input type="radio" name="q13" value="certo"> Ctrl + Shift + Esc</label>
+        <label><input type="radio" name="q13" value="errado"> Ctrl + Esc</label>
+      </div>
+
+      <div class="question">
+        <p>14. Qual atalho bloqueia o computador?</p>
+        <label><input type="radio" name="q14" value="certo"> Windows + L</label>
+        <label><input type="radio" name="q14" value="errado"> Ctrl + L</label>
+        <label><input type="radio" name="q14" value="errado"> Shift + L</label>
+      </div>
+
+      <div class="question">
+        <p>15. Qual atalho mostra a área de trabalho?</p>
+        <label><input type="radio" name="q15" value="certo"> Windows + D</label>
+        <label><input type="radio" name="q15" value="errado"> Ctrl + D</label>
+        <label><input type="radio" name="q15" value="errado"> Alt + D</label>
+      </div>
+
+      <div class="question">
+        <p>16. Qual atalho seleciona tudo?</p>
+        <label><input type="radio" name="q16" value="certo"> Ctrl + A</label>
+        <label><input type="radio" name="q16" value="errado"> Alt + A</label>
+        <label><input type="radio" name="q16" value="errado"> Shift + A</label>
+      </div>
+
+      <!-- SEÇÃO 3: ORGANIZAÇÃO DO COMPUTADOR -->
+      <h2> Organização do Computador</h2>
+
+      <div class="question">
+        <p>17. É importante organizar pastas porque:</p>
+        <label><input type="radio" name="q17" value="certo"> Facilita encontrar arquivos</label>
+        <label><input type="radio" name="q17" value="errado"> Deixa o computador mais lento</label>
+        <label><input type="radio" name="q17" value="errado"> Gasta mais memória</label>
+      </div>
+
+      <div class="question">
+        <p>18. Qual é uma boa prática ao nomear arquivos?</p>
+        <label><input type="radio" name="q18" value="certo"> Usar nomes curtos e claros</label>
+        <label><input type="radio" name="q18" value="errado"> Usar símbolos e espaços</label>
+        <label><input type="radio" name="q18" value="errado"> Usar o mesmo nome em todos</label>
+      </div>
+
+      <div class="question">
+        <p>19. Onde é recomendado salvar arquivos importantes?</p>
+        <label><input type="radio" name="q19" value="certo"> Em pastas bem organizadas ou nuvem</label>
+        <label><input type="radio" name="q19" value="errado"> Somente na área de trabalho</label>
+        <label><input type="radio" name="q19" value="errado"> Em downloads</label>
+      </div>
+
+      <div class="question">
+        <p>20. O que é a “Lixeira” do computador?</p>
+        <label><input type="radio" name="q20" value="certo"> Local temporário para arquivos excluídos</label>
+        <label><input type="radio" name="q20" value="errado"> Uma pasta de backup</label>
+        <label><input type="radio" name="q20" value="errado"> Um antivírus</label>
+      </div>
+
+      <div class="question">
+        <p>21. O que acontece se você esvaziar a Lixeira?</p>
+        <label><input type="radio" name="q21" value="errado"> Os arquivos são movidos</label>
+        <label><input type="radio" name="q21" value="certo"> Os arquivos são apagados permanentemente</label>
+        <label><input type="radio" name="q21" value="errado"> Os arquivos são salvos na nuvem</label>
+      </div>
+
+      <div class="question">
+        <p>22. O que é backup?</p>
+        <label><input type="radio" name="q22" value="errado"> Apagar arquivos antigos</label>
+        <label><input type="radio" name="q22" value="certo"> Cópia de segurança dos arquivos</label>
+        <label><input type="radio" name="q22" value="errado"> Nome de um vírus</label>
+      </div>
+
+      <div class="question">
+        <p>23. Onde é mais seguro armazenar arquivos importantes?</p>
+        <label><input type="radio" name="q23" value="certo"> Em serviços de nuvem (Google Drive, OneDrive)</label>
+        <label><input type="radio" name="q23" value="errado"> Somente no pendrive</label>
+        <label><input type="radio" name="q23" value="errado"> Na área de trabalho</label>
+      </div>
+
+      <div class="question">
+        <p>24. Por que é importante limpar arquivos desnecessários?</p>
+        <label><input type="radio" name="q24" value="certo"> Para liberar espaço e melhorar o desempenho</label>
+        <label><input type="radio" name="q24" value="errado"> Para deixar o computador mais colorido</label>
+        <label><input type="radio" name="q24" value="errado"> Não tem importância</label>
+      </div>
+
+      <div style="text-align:center; margin-top:30px;">
+        <button type="button" onclick="verificarQuiz()">Finalizar Quiz</button>
+      </div>
+    </form>
+
+    <div id="result"></div>
+    <div id="certificate">
+      <a href="certificado.html">Ver Certificado</a>
+    </div>
+  </main>
+
+  <script>
+    function verificarQuiz() {
+      const respostas = document.querySelectorAll('input[type=radio]:checked');
+      let acertos = 0;
+
+      respostas.forEach(r => {
+        if (r.value === 'certo') acertos++;
+      });
+
+      const total = 24;
+      const porcentagem = (acertos / total) * 100;
+
+      const result = document.getElementById('result');
+      const cert = document.getElementById('certificate');
+
+      if (porcentagem >= 75) {
+        result.innerHTML = `🎉 Parabéns! Você acertou ${acertos} de ${total} perguntas (${porcentagem.toFixed(1)}%).`;
+        cert.style.display = 'block';
+      } else {
+        result.innerHTML = `Você acertou ${acertos} de ${total} perguntas (${porcentagem.toFixed(1)}%).<br>⚠️ É necessário acertar pelo menos 75% para obter o certificado.`;
+        cert.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
